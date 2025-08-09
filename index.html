@@ -1,15 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <style>
-    body { font-family: Arial; text-align: center; margin-top: 50px; }
-    h1 { color: #007acc; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaik Rasool Portfolio</title>
 </head>
 <body>
-  <h1>Welcome to My Portfolio</h1>
-  <p>This site is hosted with GitHub Pages!</p>
+    <h1>Welcome to My Portfolio</h1>
+
+    <nav>
+        <a href="#about"><button>About</button></a>
+        <a href="#skills"><button>Skills</button></a>
+        <a href="#projects"><button>Projects</button></a>
+        <a href="#contact"><button>Contact</button></a>
+    </nav>
+
+    <header>
+        <section id="about">
+            <h2>Shaik Rasool</h2>
+            <img src="myimage.jpg" alt="A photo of Shaik Rasool" width="200" height="200">
+            <p>I am a passionate Electrical Engineer with basic knowledge in programming and full stack development.</p>
+            <p>I am currently pursuing B.Tech at <strong>SVR Engineering College</strong>, Nandyal.</p>
+            <p>I have learnt Full Stack Development from YouTube tutorials.</p>
+            <p>My hobbies include playing cricket, watching movies, and listening to music.</p>
+
+            <p>
+                You can 
+                <button type="button" onclick="toggleHtmlLearned()"><strong>Click Here</strong></button>
+                to check what I have learnt in HTML.
+            </p>
+            <div id="html-learned" style="display:none; margin-top:10px;">
+                <ul>
+                    <li>HTML Structure</li>
+                    <li>Headings and Paragraphs</li>
+                    <li>Links and Images</li>
+                    <li>Lists and Tables</li>
+                    <li>Forms and Inputs</li>
+                    <li>Semantic Elements</li>
+                </ul>
+            </div>
+            <script>
+                function toggleHtmlLearned() {
+                    var info = document.getElementById('html-learned');
+                    info.style.display = (info.style.display === 'none' || info.style.display === '') ? 'block' : 'none';
+                }
+            </script>
+        </section>
+    </header>
+
+    <main>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ol>
+                <li>Python Basics</li>
+                <li>HTML Basics</li>
+                <li>CSS Basics</li>
+                <li>Python</li>
+                <li>React</li>
+            </ol>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <table border="1">
+                <tr>
+                    <th>Project</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Electrical Go-Kart</td>
+                    <td>
+                        Designed and built an eco-friendly Electrical Go-Kart as a college project. 
+                        Powered by a rechargeable battery and DC motor, it offers a clean alternative 
+                        to fuel-powered vehicles. Features include a lightweight chassis, efficient 
+                        braking system, and user-friendly controls. This project enhanced my skills 
+                        in circuit design, battery management, and teamwork.
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>If you would like to get in touch, use the form below:</p>
+            <form action="mailto:shaikrasoolonline123@gmail.com" method="post" enctype="text/plain">
+                <div style="margin-bottom: 18px;">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <b>Choose Your Gender:</b><br>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <b>Select Your Interests:</b><br>
+                    <input type="checkbox" id="guidance" name="interest" value="guidance">
+                    <label for="guidance">Guidance</label>
+                    <input type="checkbox" id="chat" name="interest" value="chat">
+                    <label for="chat">Chat</label>
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="bio">Bio (up to 200 characters):</label>
+                    <input type="text" id="bio" name="bio" maxlength="200">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2023 Shaik Rasool</p>
+        <p>@ 2023 My Portfolio</p>
+    </footer>
 </body>
 </html>
